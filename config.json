@@ -1,0 +1,95 @@
+{
+    "server": {
+        "baseUrl": "https://formular.nord.freifunk.net",
+        "port": 8080,
+
+        "databaseFile": "/home/fastform/db/ffffng.sqlite",
+        "peersPath": "/home/fastform/fastdkeys/",
+
+        "logging": {
+            "directory": "/home/fastform/logs",
+            "debug": false,
+            "profile": false,
+            "logRequests": false
+        },
+
+        "internal": {
+            "active": true,
+            "user": "$$$$$$$",
+            "password": "$$$$$$$$$$$"
+        },
+
+        "email": {
+            "from": "Freifunk Nord Knotenformular <$$$$$$$$$$$$$$$$$$$$$$$$>",
+
+            "smtp": {
+                "host": "shared02.keymachine.de",
+                "port": 587,
+                "secure": false,
+                "requireTLS": true,
+                "auth": {
+                    "user": "$$$$$$$$$$",
+                    "pass": "$$$$$$$$$$"
+                }
+            }
+        },
+
+        "map": {
+            "nodesJsonUrl": "https://mesh.nord.freifunk.net/data/nodes.json"
+        }
+    },
+    "client": {
+        "community": {
+            "name": "Freifunk Nord",
+            "domain": "nord.freifunk.net",
+            "contactEmail": "admin@ffnord.net"
+        },
+        "map": {
+            "mapUrl": "https://mesh.nord.freifunk.net"
+        },
+        "monitoring": {
+            "enabled": true
+        },
+        "coordsSelector": {
+            "lat": 54.110943,
+            "lng": 9.805298,
+            "defaultZoom": 10,
+            "layers": {
+                "ffac": {
+                    "name": "OpenStreetMap (via Freifunk Aachen)",
+                    "url": "https:///tiles{s}.aachen.freifunk.net/{z}/{x}/{y}.png",
+                    "type": "xyz",
+                    "layerOptions": {
+                        "maxZoom": 19,
+                        "subdomains": "1234",
+                        "attribution": "&copy; <a href=\"https://www.openstreetmap.org/copyright\" target=\"_blank\">OpenStreetMap-Mitwirkende</a>, via Freifunk Aachen"
+                    }
+                },
+                "esri": {
+                    "name": "Esri World Imagery",
+                    "url": "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}",
+                    "type": "xyz",
+                    "layerOptions": {
+                        "attribution": "Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community",
+                        "maxZoom": 18
+                    }
+                },
+                "stamen": {
+                    "name": "Stamen (TonerLite)",
+                    "url": "https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}.png",
+                    "type": "xyz",
+                    "layerOptions": {
+                        "subdomains": "abcd",
+                        "attribution": "Map tiles by <a href=\"http://stamen.com/\">Stamen Design</a>, <a href=\"http://creativecommons.org/licenses/by/3.0/\">CC BY 3.0</a> &mdash; Map data &copy; <a href=\"http://www.openstreetmap.org/copyright/\">OpenStreetMap</a>",
+                        "maxZoom": 18
+                    }
+                }
+            }
+	},
+	"otherCommunityInfo": {
+            "showInfo": false,
+            "showBorderForDebugging": false,
+            "localCommunityPolygon": []
+        }
+    }
+}
